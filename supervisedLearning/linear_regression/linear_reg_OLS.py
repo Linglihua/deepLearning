@@ -2,6 +2,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 from sklearn import linear_model
 
+from pubData.data_production import make_data
+
+
 def func_ols():
     x = np.array([[0,1], [3,-2], [2,3]]) #训练样本的特征
     y = np.array([0.5, 0.3, 0.9])
@@ -31,10 +34,3 @@ def ols_lack(nDims):
         print("intercept_: %s"% (reg.intercept_, ))
         print("coef_: %s" %(reg.coef_, ))
     plt.show()
-
-
-def make_data(nDim):
-    x0 = np.linspace(1, np.pi, 50)                                   #一个维度的特征
-    x = np.vstack([[x0, ], [i**x0 for i in range(2, nDim+1)]])         #nDim个维度的特征
-    y = np.sin(x0) + np.random.normal(0, 0.15, len(x0))
-    return x.transpose(), y
