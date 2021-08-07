@@ -12,8 +12,8 @@ import matplotlib.pyplot as plt
 
 
 class linearRegression:
-    dims = [1, 3, 6, 12]
-    x, y = [], []
+    __dims = [1, 3, 6, 12]
+    __x, __y = [], []
     def __init__(self):
         self.x, self.y = self.__make_data(self.dims[-1])
 
@@ -74,6 +74,9 @@ class linearRegression:
             print("coef_: %s" % (reg.coef_,))
         plt.show()
 
+    '''
+    将不重要的参数化为零
+    '''
     def lasso_regression(self):
         alphas = [1e-10, 1e-3, 1, 10, ]
         for idx, i in enumerate(alphas):
