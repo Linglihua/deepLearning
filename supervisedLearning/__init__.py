@@ -9,6 +9,8 @@ import LinearRegression
 import GradientDescent
 import SVM
 import NaiveBayes
+import GaussianProcessRegressor
+
 
 if __name__ == '__main__':
     #最小二乘法
@@ -29,8 +31,10 @@ if __name__ == '__main__':
     # svmer.svmFun()
 
     #朴素贝叶斯
-    naiveBayes = NaiveBayes.NaiveBayes()
+    # naiveBayes = NaiveBayes.NaiveBayes()
     #naiveBayes.guassianNaiveBayes()
-    naiveBayes.bernolliNaiveBayes()
+    # naiveBayes.bernolliNaiveBayes()
 
-
+    #高斯过程
+    gpr = GaussianProcessRegressor.GuassianProcessRegressor()
+    gpr.gaussianProcessReg()
