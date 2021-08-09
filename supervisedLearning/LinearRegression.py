@@ -15,7 +15,7 @@ class linearRegression:
     __dims = [1, 3, 6, 12]
     __x, __y = [], []
     def __init__(self):
-        self.x, self.y = self.__make_data(self.dims[-1])
+        self.x, self.y = self.__make_data(self.__dims[-1])
 
 
     #最小二乘法
@@ -39,8 +39,8 @@ class linearRegression:
 
     def ols_lack(self):
 
-        for idx, i in enumerate(self.dims):
-            plt.subplot(2, len(self.dims) / 2, idx + 1)
+        for idx, i in enumerate(self.__dims):
+            plt.subplot(2, len(self.__dims) / 2, idx + 1)
             reg = linear_model.LinearRegression()
 
             sub_x = self.x[:, 0:i]  # 取m至n-1列数据
