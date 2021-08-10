@@ -10,7 +10,7 @@ import GradientDescent
 import SVM
 import NaiveBayes
 import GaussianProcessRegressor
-
+import DecisionTreeClassifier
 
 if __name__ == '__main__':
     #最小二乘法
@@ -36,5 +36,9 @@ if __name__ == '__main__':
     # naiveBayes.bernolliNaiveBayes()
 
     #高斯过程
-    gpr = GaussianProcessRegressor.GuassianProcessRegressor()
-    gpr.gaussianProcessReg()
+    # gpr = GaussianProcessRegressor.GuassianProcessRegressor()
+    # gpr.gaussianProcessReg()
+
+    #决策树
+    dtc = DecisionTreeClassifier.DecisionTreeClassifier()
+    dtc.decisionTreeCla()
