@@ -11,6 +11,8 @@ import SVM
 import NaiveBayes
 import GaussianProcessRegressor
 import DecisionTreeClassifier
+import EnsembleLearning
+
 
 if __name__ == '__main__':
     #最小二乘法
@@ -40,5 +42,10 @@ if __name__ == '__main__':
     # gpr.gaussianProcessReg()
 
     #决策树
-    dtc = DecisionTreeClassifier.DecisionTreeClassifier()
-    dtc.decisionTreeCla()
+    # dtc = DecisionTreeClassifier.DecisionTreeClassifier()
+    # dtc.decisionTreeCla()
+
+    #集成学习
+    ensembleL = EnsembleLearning.EnsembleLearning()
+    ensembleL.randomForestClassifier()
+    ensembleL.adaBoostClassifier()
