@@ -7,7 +7,14 @@
 '''
 
 import K_means
+import AffinityPropagationC
+
 
 if __name__ == '__main__':
-    k_means = K_means.K_means()
-    k_means.k_means()
+    #K-means
+    # k_means = K_means.K_means()
+    # k_means.k_means()
+
+    #邻近算法
+    ap = AffinityPropagationC.AffinityPropagationC()
+    ap.affinityPropagation()
